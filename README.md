@@ -2,12 +2,14 @@ This Node script accepts flags in terminal to perform various os-related functio
 
 To make a directory:
 
-`node index.js _-mkdir_ nihongo`
+`node index.js -mkdir nihongo`
 
 To create a file:
 
-`node index.js _-touch_ bakka.txt`
+`node index.js -touch bakka.txt`
 
 To list the contents of a directory:
 
 `node index.js -ls`
+
+
