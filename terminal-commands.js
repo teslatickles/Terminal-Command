@@ -3,7 +3,7 @@ const fs = require("fs");
 module.exports.ls = () => {
   fs.readdir("./", (err, files) => {
     const filesToString = files.reduce((acc, file) => {
-      return `${acc} ${file} `;
+      return `${acc} ➭ ${file} \n`;
     }, "");
     console.log(filesToString);
   });
@@ -30,7 +30,7 @@ module.exports.mkdir = directory => {
     fs.mkdir(`./${directory}(copy)`, { recursive: false }, err => {
       if (err) throw err;
       console.log(
-        "Directory exists! Making duplicate with copy appended to filename!"
+        "Directory exists! Making duplicate with '(copy)' appended to directory name!"
       );
     });
   }
